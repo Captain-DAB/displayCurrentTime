@@ -16,8 +16,34 @@ public class Displaytime {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        //Display time using the modulus and division operator
+//Display the current time in GMT
+        // Obtain the total milliseconds since midnight, Jan 1, 1970
+        long totalMilliseconds = System.currentTimeMillis();
+
+        // Obtain the total seconds since midnight, Jan 1, 1970
+        long totalSeconds = totalMilliseconds / 1000;
+
+        // Compute the current second in the minute in the hour
+        long currentSecond = totalSeconds % 60;
         
+        // Obtain the total minutes
+        long totalMinutes = totalSeconds / 60;
+
+        // Compute the current minute in the hour
+        long currentMinute = totalMinutes % 60;
+
+        // Obtain the total hours
+        long totalHours = totalMinutes / 60;
+
+        // Compute the current hour
+        long currentHour = totalHours % 24;
+
+        // Display results
+        System.out.println("Current time is " + currentHour + ":"
+                + currentMinute + ":" + currentSecond + " GMT");
+        
+        //Display time using the modulus and division operator
+
         Scanner input = new Scanner(System.in);
         // Prompt the user for input
         System.out.print("Enter an integer for seconds: ");
