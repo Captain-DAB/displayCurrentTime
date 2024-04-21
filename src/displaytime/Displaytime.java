@@ -17,7 +17,7 @@ public class Displaytime {
      */
     public static void main(String[] args) {
 //Display the current time in GMT
-        // Obtain the total milliseconds since midnight, Jan 1, 1970
+        // Obtain the total milliseconds since midnight, Jan 1, 1970(Epoch)
         long totalMilliseconds = System.currentTimeMillis();
 
         // Obtain the total seconds since midnight, Jan 1, 1970
@@ -42,7 +42,7 @@ public class Displaytime {
         System.out.println("Current time is " + currentHour + ":"
                 + currentMinute + ":" + currentSecond + " GMT");
         
-        //Display time using the modulus and division operator
+        //Display time in minutes and seconds using the modulus and division operator
 
         Scanner input = new Scanner(System.in);
         // Prompt the user for input
